@@ -23,17 +23,16 @@ h1,h2,h3,h4,h5,h6 {
    font-weight: normal;
    font-family: 'SFPro Display', Arial, Helvetica, sans-serif;
 }
-
-html {
+body {
    background-image: url(img/Background.jpg);
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-attachment: fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+   height: 1020px;
+   flex: none;
+   order: 0;
+   flex-grow: 0;
+   
  }
+
+ 
 
 /*--------------------------------------------------------Header*/
 
@@ -102,52 +101,55 @@ html {
 
 /*--------------------------------------------------------button*/
 
-.button{
-  border: 2px solid #fff;
-  font-size: 20px;
-  color: #fff;
-  display: block;
-  text-align: center;
-  line-height: 32px;
-  position: relative;
-  transition: .5s;
-  overflow: hidden;
-  border-radius: 12px;
-}
+.button {
+   border: 2px solid #fff;
+   font-size: 20px;
+   color: #fff;
+   display: block;
+   text-align: center;
+   line-height: 32px;
+   position: relative;
+   float: right;
+   transition: .5s;
+   overflow: hidden;
+   margin-top: 28px;
+   border-radius: 12px;
+ 
+ }
+ .button::before,
+ .button::after { 
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: -100%;
+    opacity: .5s;
+    transition: .3s;
+    z-index: -1;
+    transition-delay: .2s;
+    
+ }
+ 
+ button::after{
+    opacity: 1;
+    transition-delay: .2s;
+ }
+ 
+ .button:hover{
+    color: #000;
+ }
+ 
+ .button:hover::before,
+ .button:hover::after {
+    left: 0;
+ }
+ 
+ .btn { 
+   padding: 8px 32px;
+ }
 
-.button::before,
-.button::after { 
-   position: absolute;
-   content: '';
-   width: 100%;
-   height: 100%;
-   background: #fff;
-   top: 0;
-   left: -100%;
-   opacity: .5s;
-   transition: .3s;
-   z-index: -1;
-   transition-delay: .2s;
-   
-}
-
-button::after{
-   opacity: 1;
-   transition-delay: .2s;
-}
-
-.button:hover{
-   color: #000;
-}
-
-.button:hover::before,
-.button:hover::after {
-   left: 0;
-}
-
-.btn{
-   padding: 5px 32px;
-}
 
 /*--------------------------------------------------------Text*/
 
@@ -167,7 +169,6 @@ button::after{
 .title-text{
    font-weight: 600;
    font-size: 24px;
-   margin-left: 1100px;
    margin-top: 25px;
    color: #fff;
    text-align: right;
@@ -185,12 +186,12 @@ button::after{
   text-align: center;
   line-height: 32px;
   position: relative;
+  float: right;
   transition: .5s;
   overflow: hidden;
-  max-width: 10%;
-  margin-left: 1570px;
   margin-top: 28px;
   border-radius: 12px;
+
 }
 .button-two::before,
 .button-two::after { 
@@ -229,4 +230,144 @@ button::after{
 
 /*--------------------------------------------------------Section*/
 
+.About{
+   background: #161616;
+}
 
+.container__button {
+   max-width: 1920px;
+   padding: 0 100px;
+}
+
+.title {
+  margin-top: 60px;
+}
+.home { 
+   text-align: center;
+   margin-top: 350px;
+   padding-top: 60px;
+   padding-bottom: 130px;
+}
+
+.about-content {
+   display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    padding-top: 76px;
+}
+.text-infor {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.about-img {}
+
+.about-img img {
+   border-radius: 12px;
+}
+
+.about-row {
+   display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+gap: 81px;
+}
+
+ section {
+   background-image: url(img/Backgraund3.png);
+   order: 0;
+   flex-grow: 0;
+}
+
+.title-3 {
+   font-weight: 800;
+   font-size: 70px;
+   color: #fff;
+   text-align: center;
+   padding-top: 90px;
+   margin-bottom: 40px;
+}
+
+.text-map {
+   font-weight: 400;
+   font-size: 24px;
+   color: #fff;
+   text-align: center;
+}
+
+.grid{
+   padding-top: 160px;
+
+}
+
+.grid-home {
+   display: grid;
+   grid-template-columns: repeat(3, auto);
+   justify-content: space-between;
+   padding-bottom: 120px;
+   gap: 65px;
+}
+
+.grid-Map{
+   width: 420px;
+   height: 390px;
+   background: rgba(0, 221, 168, 0.5);
+   border-radius: 16px;
+}
+.grid-Calendar{
+   width: 420px;
+   height: 390px;
+   background: rgba(207, 41, 41, 0.6);
+   border-radius: 16px;
+
+}
+.grid-Key{
+   width: 420px;
+   height: 390px;
+   background: rgba(0, 88, 221, 0.6);
+   border-radius: 16px;
+}
+
+
+.grid-img {
+  text-align: center;
+  margin-bottom: 40px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+}
+
+.grid-img img {
+   margin-top: -88px;
+}
+
+.grid-write{
+ 
+}
+
+.grid-title {
+   text-align: center;
+   color: #fff;
+   font-weight: 700;
+   font-size: 28px;
+}
+
+.grid-infor {
+  padding-top: 20px;
+}
+
+.grid-text {
+   font-weight: 500;
+   font-size: 22px;
+   text-align: center;
+   color: #fff;
+
+}
+
+.grid-text span:hover {
+   border-bottom: 1px solid #fff;
+   display: inline-block;
+   line-height: 0.85;
+}
