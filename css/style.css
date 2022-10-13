@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@font-face {
+   font-family: "SFPro Display";
+   src: local("SFPro Display Regular"),
+        local("SFPro-Display-Regular"),
+         url("../fonts/SFProDisplay-Regular.woff2") format("woff2"),
+         url("../fonts/SFProDisplay-Regular.woff") format("woff"), 
+         url("../fonts/SFProDisplay-Regular.eot") format("eot");
+   font-weight: normal;
+   font-style: normal;
+   font-display: fallback;
+ }
+
+
+body{
+   margin: 0;
+   padding: 0;
+   font-family: 'SFPro Display', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   font-weight: normal;
+   font-family: 'SFPro Display', Arial, Helvetica, sans-serif;
+}
+
+html {
+   background-image: url(img/Background.jpg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+/*--------------------------------------------------------Header*/
+
+.header {
+   padding-top: 32px;
+   
+}
+
+.container {
+   max-width: 1920px;
+   padding: 0 100px;
+}
+
+.menu {
+  
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+
+.header-logo {}
+
+.logo {
+   color: #fff;
+   font-weight: 700;
+   font-size: 56px;
+   
+}
+
+.items-menu {
+   display: flex;
+   gap: 40px;
+
+}
+
+.menu-link {
+   font-weight: 400;
+   font-size: 20px;
+   color: #fff;
+   position: relative;
+   cursor: pointer;
+}
+
+.menu-link:not(:hover):after {
+   -webkit-transform: scalex(0);
+    transform: scalex(0);
+}
+
+.menu-link:after, .menu-link>button:after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   left: 0;
+   bottom: -3px;
+   background: #fff;
+   transition: -webkit-transform .5s;
+   transition: transform .5s;
+   transition: transform .5s,-webkit-transform .5s;
+}
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------button*/
+
+.button{
+  border: 2px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 32px;
+  position: relative;
+  transition: .5s;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.button::before,
+.button::after { 
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 100%;
+   background: #fff;
+   top: 0;
+   left: -100%;
+   opacity: .5s;
+   transition: .3s;
+   z-index: -1;
+   transition-delay: .2s;
+   
+}
+
+button::after{
+   opacity: 1;
+   transition-delay: .2s;
+}
+
+.button:hover{
+   color: #000;
+}
+
+.button:hover::before,
+.button:hover::after {
+   left: 0;
+}
+
+.btn{
+   padding: 5px 32px;
+}
+
+/*--------------------------------------------------------Text*/
+
+.header-title {
+  text-align: end;
+  margin-top: 92px;
+}
+
+.title {
+  color: #fff;
+  font-size: 115px;
+  font-weight: 600;
+}
+.title span {
+
+}
+.title-text{
+   font-weight: 600;
+   font-size: 24px;
+   margin-left: 1100px;
+   margin-top: 25px;
+   color: #fff;
+   text-align: right;
+}
+
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------Button*/
+
+.button-two {
+  border: 2px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 32px;
+  position: relative;
+  transition: .5s;
+  overflow: hidden;
+  max-width: 10%;
+  margin-left: 1570px;
+  margin-top: 28px;
+  border-radius: 12px;
+}
+.button-two::before,
+.button-two::after { 
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 100%;
+   background: #fff;
+   top: 0;
+   left: -100%;
+   opacity: .5s;
+   transition: .3s;
+   z-index: -1;
+   transition-delay: .2s;
+   
+}
+
+button::after{
+   opacity: 1;
+   transition-delay: .2s;
+}
+
+.button-two:hover{
+   color: #000;
+}
+
+.button-two:hover::before,
+.button-two:hover::after {
+   left: 0;
+}
+
+.btn-two { 
+  padding: 8px 32px;
+}
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------Section*/
+
+
