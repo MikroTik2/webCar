@@ -67,7 +67,7 @@ address {
 input, textarea, button, select {
 	font-family: inherit;
    font-size: inherit;
-   color: inherit;
+   color: #fff;
    background-color: transparent;
 }
 
